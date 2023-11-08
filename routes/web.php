@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\PostcodePageController;
 use Illuminate\Support\Facades\Route;
+use JustSteveKing\LaravelPostcodes\Rules\Postcode;
+use JustSteveKing\LaravelPostcodes\Service\PostcodeService;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', PostcodePageController::class)
+    ->name('pages.postcode');
+
+Route::post('/postcode', [PostcodePageController::class, 'store'])
+    ->name('pages.postcode.store');
