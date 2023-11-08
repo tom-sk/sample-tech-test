@@ -4,7 +4,6 @@ namespace App\Http\Requests;
 
 use App\DataTransferObjects\PostcodeData;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 use JustSteveKing\LaravelPostcodes\Rules\Postcode;
 use JustSteveKing\LaravelPostcodes\Service\PostcodeService;
 
