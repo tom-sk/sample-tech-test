@@ -25,7 +25,7 @@ class PostcodePageController extends Controller
 
             $postcode = LocalPostcode::create([
                 'postcode' => $formattedPostCode,
-                'parliamentary_constituency' => $info->parliamentary_constituency,
+                'parish' => $info->parish,
                 'nuts' => $info->nuts,
                 'pfa' => $info->pfa,
             ]);
@@ -34,7 +34,7 @@ class PostcodePageController extends Controller
         return redirect()->route('pages.postcode')
             ->with([
                 'postcode' => $validated->postcode,
-                'parliamentary_constituency' => $postcode->parliamentary_constituency,
+                'parish' => $postcode->parish,
                 'nuts' => $postcode->nuts,
                 'pfa' => $postcode->pfa,
             ])

@@ -10,7 +10,7 @@ return new class extends Migration {
         Schema::create('local_postcodes', function (Blueprint $table) {
             $table->id();
             $table->string('postcode');
-            $table->string('parliamentary_constituency');
+            $table->string('parish');
             $table->string('nuts');
             $table->string('pfa');
             $table->timestamps();

@@ -11,7 +11,7 @@ class LocalPostcode extends Model
 
     protected $fillable = [
         'postcode',
-        'parliamentary_constituency',
+        'parish',
         'nuts',
         'pfa',
     ];
